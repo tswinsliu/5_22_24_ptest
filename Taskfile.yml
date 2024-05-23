@@ -1,0 +1,20 @@
+version: '3'
+
+tasks:
+  hello:
+    cmds:
+      - echo 'Hello World from Task!'
+    silent: true
+  construct:
+    cmds:
+      - mkdir temp
+      - echo 'Made a Directory!'
+  destroy:
+    cmds:
+      - rm -d temp
+      - echo 'Deleted a Directory!'
+  all:
+    cmds:
+      - task construct
+      - task destroy
+      - task hello
