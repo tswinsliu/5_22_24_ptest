@@ -11,8 +11,11 @@ tasks:
       - echo 'Made a Directory!'
   destroy:
     cmds:
-      - rm -d temp
+      - rm -d new_directory
       - echo 'Deleted a Directory!'
+  commit:
+    cmds:
+      - git c -m new_commit
   all:
     cmds:
       - task construct
